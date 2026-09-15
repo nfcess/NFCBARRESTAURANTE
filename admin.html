@@ -1,0 +1,41 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Panel privado - Bar El Parque</title>
+</head>
+
+<body>
+    <div class="fondo"></div>
+
+    <main>
+        <header>
+            <h1>Panel privado</h1>
+            <p class="mensaje">Ingresá con el correo del dueño</p>
+        </header>
+
+        <section id="login-section">
+            <form id="login-form">
+                <label>Correo electrónico</label>
+                <input id="email" type="email" required>
+
+                <label>Contraseña</label>
+                <input id="password" type="password" required>
+
+                <button type="submit">Ingresar</button>
+                <p id="login-status" class="form-status"></p>
+            </form>
+        </section>
+
+        <section id="dashboard-section" hidden>
+            <h2>Mensajes recibidos</h2>
+            <div id="feedback-list"></div>
+            <button id="logout-button" class="secondary-button">Cerrar sesión</button>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="admin.js"></script>
+</body>
